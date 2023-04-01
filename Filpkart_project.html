@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="Flipkart_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Online Shopping site</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-2 col-lg-2">
+                        <img src="project1_images/flipkartplus_icon.png" width="100px">
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="conainer">
+                            <div class="d-flex flex-row">
+                                <input type="search" class="form-control mt-4 searchicon" placeholder="search" >
+                                <button style="height:40px ;margin-top:22px;border:0px;border-radius:5px;border-left:0px"> <i class="fa-solid searchicon fa-magnifying-glass mt-3"></i></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 mt-4">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Login
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                            <div class="col-12 col-md-4 bg-primary">
+                                                <div class="card bg-primary">
+                                                    <div class="card-body">
+                                                         <h5 class="card-title">Login</h5>
+                                                         <p>Get access to<br> your Orders,<br>Wishlist and<br>Recommendations<br></p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 mt-4">
+                                                <form  onsubmit=" return formValidation()" action="Filpkart_project.html">
+                                                    <label>User Id</label><br><p id="invaliduser"></p>
+                                                    <input type="email" placeholder="Enter Userid" id="userid" />
+                                                    <br><br>
+                                                    <label>Password</label><br><p id="invalidpassword"></p>
+                                                    <input type="password" placeholder="Enter your password" id="userpassword" /><br/>Showpassword
+                                                    <input type="checkbox" onclick="Showpassword()">
+                                                    <br><br>
+                                                    <button type="submit" onclick="">Login</button><br><br>
+                                                    <div class="mb-5">
+                                                    <a href="Account.html" style="text-decoration:none" class="ml-2">Register</a>
+                                                    <a href="" style="text-decoration:none">Forgot password</a>
+                                                   </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class=" col-12 col-md-2 col-lg-2 mt-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">24*7 customer care</a>
+                            <a class="dropdown-item" href="#">Download Flipkart</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notification preference</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 mt-4">
+                        <div class="d-flex flex-row">
+                            <a href="" style="color: white">cart <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <sup><input type="number" class="Cart" value="0" min="0" id="IncrementCart" style="width:30px"></sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-2 mt-2">
+                    <div class="card shadow">
+                        <a href="Day01tags.html">
+                            <img src="project1_images/groceries.jpg" width="150px" alt="" onclick="CartIncrement()"/><br />
+                        </a>
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>Groceries</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="card shadow">
+                        <img src="project1_images/electronics.jpg" width="150px" height="110px" alt="" />
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>Electronics</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="card shadow">
+                        <img src="project1_images/homeappliances.jpg" width="150px" height="110px" alt="" />
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>HomeAppliances</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="card shadow">
+                        <img src="project1_images/fashion.jpg" width="150px" height="110px" alt="" />
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>Fashion</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="card shadow">
+                        <img src="project1_images/toys.jpg" width="150px" height="110px" alt="" />
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>Toys</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <div class="card shadow">
+                        <img src="project1_images/electronics.jpg" width="150px" height="110px" alt="" />
+                        <div class="body" style="text-align:center">
+                            <div class="title">
+                                <b>Electronics</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner carousel">
+            <div class="carousel-item active">
+                <img src="project1_images/bigbillion_slider.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item item">
+                <img src="project1_images/slider2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item item">
+                <img src="project1_images/Galaxy_slider.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 ">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h1 class="card-title"> Best of Electronics</h1><br />
+                        <a href="" class="btn btn-primary card-text">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-2">
+                <div class="card shadow mt-3">
+                    <img src="project1_images/moniter.jpg" height="150px">
+                    <h6 class="card-text" style="text-align: center;">Monitor</h6><br />
+                    <div style="text-align:center">
+                        <a href="">From rs 8900</a><br />
+                        <p>DELL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-2">
+                <div class="card shadow mt-3">
+                    <img src="project1_images/Tv_slider.jpg" height="150px">
+                    <h6 class="card-text" style="text-align: center;">TV</h6><br />
+                    <div style="text-align:center">
+                        <a href="">Shop Now</a><br />
+                        <p>From rs 12999</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-2">
+
+                <div class="card shadow mt-1">
+
+                    <img src="project1_images/printer_slider.jpg">
+
+                    <h6 class="card-text" style="text-align: center;">Printer</h6><br />
+                    <div style="text-align:center">
+                        <a href="printer.html">From rs 3999</a><br />
+                        <p>HP</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-2">
+                <div class="card shadow mt-1">
+                    <img src="project1_images/mobile_slider.jpg">
+                    <h6 class="card-text" style="text-align: center;">Mobile</h6><br />
+                    <div style="text-align:center">
+                        <a href="">Shop Now</a><br />
+                        <p>From 12999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="Footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">About</b><br><br />
+                        <h6>Contact us</h6><br>
+                        <h6>About us</h6><br>
+                        <h6>Careers</h6><br>
+                        <h6>FlipKart Stories</h6><br>
+                        <h6>press</h6><br>
+                        <h6>FlipKart Wholesale</h6><br>
+                        <h6>Corpotare Information</h6>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">HELP</b><br><br />
+                        <h6>Payments</h6><br>
+                        <h6>Shipping</h6><br>
+                        <h6>Cancellation & Returns</h6><br>
+                        <h6>FAQ</h6><br>
+                        <h6>Report Infrigment</h6>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">POLICY</b><br><br />
+                        <h6>Return Policy</h6><br>
+                        <h6>Terms of use</h6><br>
+                        <h6>Security</h6><br>
+                        <h6>Privacy</h6><br>
+                        <h6>Sitemap</h6><br>
+                        <h6>EPR Compliance</h6>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">SOCIAL</b><br /><br />
+                        <h6>FaceBook</h6><br>
+                        <h6>Twitter</h6><br>
+                        <h6>Youtube</h6>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">Mail us:</b><br /><br />
+                        <h6>Flipkart Internet Private Limited,</h6><br>
+                        <h6>Buildings Alyssa,Begonia,</h6><br>
+                        <h6>Clove Embassy Tech Village,</h6><br>
+                        <h6>Outer ring road,Devarabeesanahalli Village,</h6><br>
+                        <h6>Bengaluru,560103</h6><br>
+                        <h6>Karnataka,India</h6><br>
+                    </div>
+                    <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                        <b class="Heading">Registered Office Address</b><br /><br />
+                        <h6>Flipkart Internet Private Limited,</h6><br>
+                        <h6>Buildings Alyssa,Begonia,</h6><br>
+                        <h6>Clove Embassy Tech Village,</h6><br>
+                        <h6>Outer ring road,Devarabeesanahalli Village,</h6><br>
+                        <h6>Bengaluru,560103</h6><br>
+                        <h6>Karnataka,India</h6><br>
+                        <h6>CIN: U51109KA2012PTC066107</h6>
+                        <h6>Telephone:<a href="">044-45614700</a></h6>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>Become a Seller</h5>
+                </div>
+                <div class="col-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>Advertise</h5>
+                </div>
+                <div class="co-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>Gift Cards</h5>
+                </div>
+                <div class="co-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>Help Center</h5>
+                </div>
+                <div class="co-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>2007-2023 FlipKart.com</h5>
+                </div>
+                <div class="co-12 col-md-2 col-lg-2 Footer-Text">
+                    <h5>Help Center</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="Filpkart.js">
+
+   </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

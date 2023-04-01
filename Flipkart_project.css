@@ -1,0 +1,37 @@
+.carousel .item {
+  height: 320px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 320px;
+}
+.Footer{
+    background-color: black;
+}
+.Footer-Text{
+    color:white
+}
+.Heading{
+    color: olivedrab;
+}
+form{
+    border-radius:10px;
+    background-color: whitesmoke;
+}
+input{
+    border-radius:10px;
+}
+button{
+    border-radius:10px;
+    background: white;
+
+
+}
+label{
+    font-weight:bold;
+}
+button:hover{
+    background:blue;
+}
